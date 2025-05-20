@@ -1,5 +1,5 @@
 import assert from "node:assert";
-import * as pkg from "@fimion/use-magic-props";
+import * as pkg from "use-magic-props";
 
 globalThis.console.log(pkg.welcome());
 

@@ -4,7 +4,7 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   resolve: {
     alias: {
-      "@fimion/use-magic-props": fileURLToPath(
+      "use-magic-props": fileURLToPath(
         new URL("./src/index.ts", import.meta.url).href,
       ),
     },

@@ -1,8 +1,9 @@
 {
-  "name": "@fimion/use-magic-props",
+  "name": "use-magic-props",
   "type": "module",
   "version": "0.0.2",
   "packageManager": "pnpm@10.11.0",
+  "private": false,
   "description": "",
   "license": "MIT",
   "repository": "fimion/use-magic-props",
@@ -53,7 +54,7 @@
     "vue": "latest"
   },
   "resolutions": {
-    "@fimion/use-magic-props": "link:."
+    "use-magic-props": "link:."
   },
   "peerDependencies": {
     "vue": ">=3"

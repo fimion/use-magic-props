@@ -5,6 +5,6 @@
     "dev": "node index.js"
   },
   "dependencies": {
-    "@fimion/use-magic-props": "latest"
+    "use-magic-props": "latest"
   }
 }

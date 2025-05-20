@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  '@fimion/use-magic-props': link:.
+  'use-magic-props': link:.
 
 importers:
 
@@ -56,7 +56,7 @@ importers:
 
   playground:
     dependencies:
-      '@fimion/use-magic-props':
+      'use-magic-props':
         specifier: link:..
         version: link:..
 
