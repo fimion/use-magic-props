@@ -1,8 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { welcome } from "../src";
+import { useMagicProps } from "../src";
 
-describe("package-name", () => {
-  it("works", () => {
-    expect(welcome()).toMatchInlineSnapshot('"hello world"');
+describe("@fimion/use-magic-props", () => {
+  it("exists", () => {
+    // Dumb test for a dumb package
+    expect(useMagicProps).toBeTypeOf("function");
   });
 });
