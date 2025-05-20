@@ -1,11 +1,11 @@
 {
-  "name": "package-name",
+  "name": "@fimion/use-magic-props",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "packageManager": "pnpm@10.11.0",
   "description": "",
   "license": "MIT",
-  "repository": "danielroe/package-name",
+  "repository": "fimion/use-magic-props",
   "sideEffects": false,
   "exports": {
     ".": "./dist/index.mjs"
@@ -39,6 +39,7 @@
   "devDependencies": {
     "@fimion/lint-config": "latest",
     "@vitest/coverage-v8": "latest",
+    "@vue/test-utils": "latest",
     "bumpp": "latest",
     "changelogithub": "latest",
     "eslint": "latest",
@@ -48,10 +49,14 @@
     "simple-git-hooks": "latest",
     "typescript": "latest",
     "unbuild": "latest",
-    "vitest": "latest"
+    "vitest": "latest",
+    "vue": "latest"
   },
   "resolutions": {
-    "package-name": "link:."
+    "@fimion/use-magic-props": "link:."
+  },
+  "peerDependencies": {
+    "vue": ">=3"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
