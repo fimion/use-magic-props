@@ -19,8 +19,21 @@ npm install use-magic-props
 pnpm install use-magic-props
 ```
 
-```js
-import {} from 'use-magic-props'
+```vue
+<script setup>
+  import {useMagicProps} from "use-magic-props";
+  import {ref} from "vue";
+
+
+  const propsDef = ref([]);
+
+  useMagicProps(propsDef);
+
+  propsDef.value.push("newPropName");
+  // "newPropName" is now a prop!
+
+</script>
+
 ```
 
 ## 💻 Development
