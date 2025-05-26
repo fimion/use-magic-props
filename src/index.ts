@@ -174,7 +174,7 @@ function getPropKeys(propsDef: string[] | Record<string, unknown>) {
 /**
  *
  * @param propsDef
- * @returns {import("@vue/runtime-core").Data}
+ * @returns {Data}
  */
 export function useMagicProps(propsDef: MaybeRef<ComponentPropsOptions>) {
   const instance = getCurrentInstance() as ComponentMagicInternalInstance;
