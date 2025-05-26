@@ -30,7 +30,7 @@ importers:
         specifier: latest
         version: 9.27.0(jiti@2.4.2)
       happy-dom:
-        specifier: ^17.4.7
+        specifier: latest
         version: 17.4.7
       installed-check:
         specifier: latest
