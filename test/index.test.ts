@@ -117,4 +117,26 @@ describe("use-magic-props", () => {
     );
     expect(mockComponent.html()).toContain("value");
   });
+  it("can add props at runtime with type definition", () => {
+    const mockComponent = mount(
+      {
+        template: "<div>{{ newProp }}</div>",
+        setup() {
+          const propsDef = ref<ComponentPropsOptions<Record<string, unknown>>>(
+            {},
+          );
+          useMagicProps(propsDef);
+          // @ts-expect-error This will need better typing
+          propsDef.value.newProp = String;
+        },
+      },
+      {
+        props: {
+          newProp: "value",
+        },
+      },
+    );
+
+    expect(mockComponent.html()).toContain("value");
+  });
 });
