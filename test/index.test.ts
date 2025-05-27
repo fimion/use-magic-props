@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { useMagicProps } from "../src";
 import { mount } from "@vue/test-utils";
-import { ref } from "vue";
+import { type ComponentPropsOptions, ref } from "vue";
 
 describe("use-magic-props", () => {
   it("exists", () => {
@@ -85,6 +85,29 @@ describe("use-magic-props", () => {
           propsDef.value.push("newProp");
         },
         template: "<div>{{ newProp }}</div>",
+      },
+      {
+        props: {
+          newProp: "value",
+        },
+      },
+    );
+    expect(mockComponent.html()).toContain("value");
+  });
+  it("can add props at runtime with complex type definition", () => {
+    const mockComponent = mount(
+      {
+        template: "<div>{{ newProp }}</div>",
+        setup() {
+          const propsDef = ref<ComponentPropsOptions<Record<string, unknown>>>(
+            {},
+          );
+          useMagicProps(propsDef);
+          // @ts-expect-error We'll need to figure out how to dynamically add a type here?
+          propsDef.value.newProp = {
+            type: String,
+          };
+        },
       },
       {
         props: {
